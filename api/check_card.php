@@ -19,13 +19,20 @@ if(isset($_POST['type']) && isset($_POST['code']) && isset($_POST['serial']) && 
     $serial		= $_POST['serial']; //serial the
     $amount		= $_POST['amount']; // Mệnh giá
     $request_id = time(); //Mã tự sinh trong mỗi giao dịch và không giống nhau (Chúng tôi sẽ lưu lại mã này để đối chiếu khi có khiếu nại)
-    
+
+    $res_status = $api->check_status($type, $code, $serial);
+
+    if ($res_status->status == 89) {
+        echo '<pre>';
+        print_r($res_status);
+        exit();
+    }
+
     $res = $api->check_card($type, $code, $serial, $amount, $request_id);
     //var_dump($res);
     
     echo '<pre>';
     print_r($res);
-
 
 
     //thành công

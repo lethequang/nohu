@@ -163,8 +163,9 @@ class Card_charging_api {
         $opts[CURLOPT_HEADER] = false;
         $opts[CURLOPT_RETURNTRANSFER] = true;
         $opts[CURLOPT_TIMEOUT] = 100;
-        
-        if (count($data))
+
+        $data_array = (array)$data;
+        if (count($data_array))
         {
         	$opts[CURLOPT_POST] = true;
         	$opts[CURLOPT_POSTFIELDS] = http_build_query($data);
