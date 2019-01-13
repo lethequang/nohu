@@ -1,0 +1,379 @@
+@font-face {
+    font-family: 'cook';
+    src: url('fonts/UTMCookies.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avo';
+    src: url('fonts/UTMAvo.ttf');
+}
+@font-face {
+    font-family: 'gua';
+    src: url('fonts/UTMGuanine.ttf');
+}
+
+@font-face {
+    font-family: 'isa';
+    src: url('fonts/UTMIsadoraR.ttf');
+}
+p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+body{
+    font-family: Avo;
+    background: url("../../img/back.png") no-repeat top center;
+    background-size: cover;
+}
+.floatlef{
+    float: left;
+}
+.floatright{
+    float: right;
+}
+.flex img{
+    margin: 0px 10px;
+    margin-top: 10px;
+}
+.marquen{
+    font-size: 21px;
+    color: #e4e0e6;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 52px;
+}
+.marquen span{
+    color: #ffff00;
+}
+.sin{
+    background: url("../../img/table.png") no-repeat top center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    padding: 0px 15px;
+    margin-bottom: 10px;
+}
+.item h2{
+    margin: 0 auto;
+    font-family: gua;
+    font-size: 21px;
+    color: white;
+}
+.item p{
+    font-size: 24px;
+    font-family: isa;
+    color: #ffff00;
+}
+.x6{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+.tex{
+    padding-left: 10px;
+}
+
+.owl-carousel .owl-item {
+    float: left;
+    text-align: center;
+    margin: 0px 10px;
+}
+.pa_o{
+    padding: 0px;
+}
+.box{
+    margin-top: -60px;
+}
+.chan{
+   margin-top: 20px;
+}
+.so p{
+    font-size: 20px;
+    font-family: isa;
+    color: #ffff00;
+}
+.so{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+.modal-dialog{
+    /*width: 728px;*/
+    background: transparent;
+}
+.modal-content{
+    background: transparent;
+}
+
+*:focus {
+    outline: none;
+}
+
+#menhgia{
+    background: url("../../img/menhgia-help.png") no-repeat top center;
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.napno{
+    width: 100%;
+    height: 650px;
+    background: url("../../img/popup.png") no-repeat top center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.napno .inz input{
+    width: 450px;
+    height: 80px;
+    background: url("../../img/textbox.png") no-repeat top center;
+    border: none;
+    font-size: 26px;
+    font-family: Avo;
+    color: white;
+    padding: 0px 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#captcha{
+    width: 220px;
+    height: 80px;
+    background: url("../../img/textbox-small.png") no-repeat top center;
+    border: none;
+    font-size: 26px;
+    font-family: Avo;
+    color: white;
+    padding: 0px 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#captcha-img{
+    width: 110px;
+    height: 66px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+#refesh-img{
+    width: 110px;
+    margin-bottom: 10px;
+}
+
+.napno .inz select{
+    width: 450px;
+    height: 80px;
+    background: url("../../img/textbox.png") no-repeat top center;
+    border: none;
+    font-size: 26px;
+    font-family: Avo;
+    color: white;
+    padding: 0px 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-select{
+    color:#737373;
+
+}
+
+.napno button{
+    background: none;
+    border: none;
+    display: inline-block;
+
+}
+
+.dangnhap{
+    width: 100%;
+    height: 470px;
+    background: url("../../img/modal.png") no-repeat top center;
+    text-align: center;
+    padding-top: 80px;
+}
+.dangnhap .inz input{
+    width: 386px;
+    height: 69px;
+    background: url("../../img/input.png") no-repeat top center;
+    border: none;
+    font-size: 26px;
+    font-family: Avo;
+    color: white;
+    padding: 0px 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.checkbox label{
+    font-size: 22px;
+    font-family: Avo;
+    color: white;
+}
+.checkbox label input{
+    width: 30px;
+    height: 30px;
+}
+.checkbox input[type=checkbox]{
+    margin-left: -40px;
+}
+.dangnhap button{
+    background: none;
+    border: none;
+    display: inline-block;
+
+}
+.close{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.mkOTP,.dangnhap  .otp{
+    display: none;
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 1200px;
+    }
+    .m20{
+        width: 20%;
+    }
+    .m80{
+        width: 80%;
+        margin-top: 80px;
+    }
+}
+@media (min-width: 1800px) {
+    .container{
+        width: 1740px;
+    }
+    .m20{
+        width: 20%;
+    }
+    .m80{
+        width: 80%;
+        margin-top: 107px;
+    }
+    .box {
+        margin-top: -85px;
+    }
+    .chan {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .owl-carousel .owl-item img{
+        width: 208px!important;
+    }
+    .owl-carousel .owl-item img.im{
+        width: 300px!important;
+    }
+    .so p {
+        font-size: 28px;
+        font-family: isa;
+        color: #ffff00;
+    }
+    .sin {
+        background: url(../../img/table.png) no-repeat top center;
+        padding-top: 95px;
+        padding-bottom: 65px;
+        background-size: 100%;
+    }
+    .item h2 {
+        margin: 0 auto;
+        font-family: gua;
+        font-size: 30px;
+        color: white;
+    }
+    .item p {
+        font-size: 30px;
+        font-family: isa;
+        color: #ffff00;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        padding: 0px 15px;
+        margin-bottom: 15px;
+    }
+    .thum img{
+        width: 80px;
+        height: 80px;
+    }
+    .ihu{
+        width: 180px;
+    }
+    .marquen {
+        font-size: 35px;
+        color: #e4e0e6;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 59px;
+    }
+    img.face {
+        width: 60px;
+    }
+    img.dnhap {
+        width: 195px;
+    }
+    img.dky {
+        width: 180px;
+    }
+    .cup{
+        width: 106px;
+    }
+    .viz{
+        width: 176px;
+    }
+    .daily{
+        width: 256px;
+    }
+    .group{
+        width: 98px;
+    }
+    .facen{
+        width: 106px;
+    }
+    .taigame{
+        width: 300px;
+    }
+    .flex img {
+        margin: 0px 40px;
+        margin-top: 10px;
+    }
+}
