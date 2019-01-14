@@ -1,4 +1,3 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 if(isset($_POST['type']) && isset($_POST['code']) && isset($_POST['serial']) && isset($_POST['amount']))
 {
@@ -22,30 +21,33 @@ if(isset($_POST['type']) && isset($_POST['code']) && isset($_POST['serial']) && 
 
     $res_status = $api->check_status($type, $code, $serial);
 
-    if ($res_status->status == 89) {
-        echo '<pre>';
-        print_r($res_status);
+    if ($res_status->status == '89') {
+        //echo '<pre>';
+        //print_r($res_status);
+		echo $res_status->status;
         exit();
     }
 
     $res = $api->check_card($type, $code, $serial, $amount, $request_id);
     //var_dump($res);
     
-    echo '<pre>';
-    print_r($res);
+    //echo '<pre>';
+    //print_r($res);
 
 
     //thành công
-    if(isset($res->status) && $res->status == '0')
+    if(isset($res->status))
     {
-        $amount     = $res->amount; //mệnh giá thẻ mà bạn gưi sang
-        $type       = $res->type; //Loại thẻ mà bạn gưi sang
-        $serial     = $res->serial; //serial mà bạn gưi sang
-        $code       = $res->code; //mã thẻ mà bạn gưi sang
-        $request_id = $res->request_id; //request_id ma đối tác gửi sang
-        $transid    = $res->transid; //mã giao dịch bên key24h.com
+//        $amount     = $res->amount; //mệnh giá thẻ mà bạn gưi sang
+//        //$type       = $res->type; //Loại thẻ mà bạn gưi sang
+//        $serial     = $res->serial; //serial mà bạn gưi sang
+//        $code       = $res->code; //mã thẻ mà bạn gưi sang
+//        $request_id = $res->request_id; //request_id ma đối tác gửi sang
+//        $transid    = $res->transid; //mã giao dịch bên key24h.com
         
-        echo 'Bạn đã gửi thành công thẻ '.$type .' mệnh giá '.number_format($amount).' đ';
+        //echo 'Bạn đã gửi thành công thẻ '.$type .' mệnh giá '.number_format($amount).' đ';
+
+		echo $res->status;
     }
     //có lỗi
     else
@@ -55,5 +57,5 @@ if(isset($_POST['type']) && isset($_POST['code']) && isset($_POST['serial']) && 
 }else{
     echo 'Kiem tra lai du lieu';
 }
-      
+
 		

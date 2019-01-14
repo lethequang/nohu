@@ -142,6 +142,11 @@ body{
     outline: none;
 }
 
+#submit:active {
+    transform: scale(.9);
+    box-shadow: 0 3px 15px -2px;
+}
+
 #menhgia{
     background: url("../../img/menhgia-help.png") no-repeat top center;
     width: 100%;
