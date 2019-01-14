@@ -135,13 +135,13 @@ catch (Card_charging_Exception $e) {
                                 <option value="300000" class="text-select">300.000</option>
                                 <option value="500000" class="text-select">500.000</option>
                             </select>
-                            <input type="number" class="seri" name="serial" placeholder="Nhập số Seri">
-                            <input type="number" class="code" name="code" placeholder="Nhập mã thẻ">
+                            <input type="number" class="seri" name="serial" id="serial" placeholder="Nhập số Seri">
+                            <input type="number" class="code" name="code" id="code" placeholder="Nhập mã thẻ">
                             <input type="text" id="captcha" placeholder="Mã xác nhận">
                             <img id="captcha-img" src="img/captcha.PNG">
                             <img id="refesh-img" src="img/refesh.png">
                         </div>
-                        <button type="submit" name="submit" id="submit"><img src="img/napgold-btn.png"></button>
+                        <button type="submit" name="submit" id="submit"><img id="napgold-img" src="img/napgold-btn.png"></button>
 
                     </form>
                 </div>
@@ -197,6 +197,55 @@ catch (Card_charging_Exception $e) {
 <script>
 
     $(document).ready(function() {
+
+		$('#submit').on('click', function () {
+			var serial = $('#serial').val(),
+				code = $('#code').val();
+
+			if (serial.length === 0 || code.length === 0) {
+				alert('Vui lòng nhập đủ thông tin');
+				return false;
+			}
+		});
+
+		// Submit search params by enter key
+		$('#serial, #code').keypress(function(e) {
+			if(e.which == 13) {
+				$('#submit').click();
+			}
+		});
+
+		// this is the id of the form
+		$("#fomrz").submit(function(e) {
+
+
+			var form = $(this);
+			var url = form.attr('action');
+
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: form.serialize(), // serializes the form's elements.
+				success: function(data)
+				{
+					if (data == 89) {
+						console.log(data)
+						alert('Thông tin thẻ không chính xác hoặc đã được sử dụng. Vui lòng kiểm tra lại.')
+					}
+					else if (data == 0) {
+						console.log(data)
+						alert('Nạp nổ thành công. Hệ thống đang xử lý.')
+					}
+					else {
+						console.log(data)
+						alert('Hệ thống đang có lỗi. Vui lòng thử lại sau.')
+					}
+				}
+			});
+
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+		});
+
         $("#img-chonthe").on("click", function(event) {
             var y = event.pageY - this.offsetTop;
             
@@ -218,20 +267,6 @@ catch (Card_charging_Exception $e) {
         });
     });
 
-    $('#btn-login').on('click', function () {
-        var uname = $('.tkDangNhap').val(),
-            upass = $('.mkDangNhap').val();
-
-        if (uname.length === 0 || uname.length < 6) {
-            alert('Vui lòng nhập đúng tài khoản');
-            return false;
-        }
-
-        if (upass.length === 0 || upass.length < 6) {
-            alert('Vui lòng nhập đúng mật khẩu');
-            return false;
-        }
-    });
 
     /*$('#chonthe').click(function () {
         $('#img-chonthe').remove();
