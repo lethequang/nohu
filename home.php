@@ -124,16 +124,23 @@ catch (Card_charging_Exception $e) {
                     <form id="fomrz" method="POST" action="api/check_card.php">
                         <div class="inz">
                             <select id="select-mang" name="type">
+                                <option value="1" class="text-select">VIETTEL AUTO</option>
                                 <option value="3" class="text-select">VIETTEL</option>
                                 <option value="2" class="text-select">MOBIFONE</option>
                                 <option value="23" class="text-select">VINAFONE</option>
+                                <option value="21" class="text-select">GATE AUTO</option>
+                                <option value="22" class="text-select">GARENA</option>
                             </select>
                             <select name="amount">
+                                <option value="10000" class="text-select">10.000</option>
+                                <option value="20000" class="text-select">20.000</option>
+                                <option value="30000" class="text-select">30.000</option>
                                 <option value="50000" class="text-select">50.000</option>
                                 <option value="100000" class="text-select">100.000</option>
                                 <option value="200000" class="text-select">200.000</option>
                                 <option value="300000" class="text-select">300.000</option>
                                 <option value="500000" class="text-select">500.000</option>
+                                <option value="1000000" class="text-select">1.000.000</option>
                             </select>
                             <input type="number" class="seri" name="serial" id="serial" placeholder="Nhập số Seri">
                             <input type="number" class="code" name="code" id="code" placeholder="Nhập mã thẻ">
@@ -241,7 +248,7 @@ catch (Card_charging_Exception $e) {
             
             if (y > 100 && y < 215) {
                 $("#img-chonthe").attr('src',"img/chonthe-viettel.PNG");
-                $("#select-mang").val('3')
+                $("#select-mang").val('1')
                 return false;
             }
             if (y > 235 && y < 345) {
