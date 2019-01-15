@@ -228,18 +228,8 @@ catch (Card_charging_Exception $e) {
 				data: form.serialize(), // serializes the form's elements.
 				success: function(data)
 				{
-					if (data == 89) {
-						console.log(data)
-						alert('Thông tin thẻ không chính xác hoặc đã được sử dụng. Vui lòng kiểm tra lại.')
-					}
-					else if (data == 0) {
-						console.log(data)
-						alert('Nạp nổ thành công. Hệ thống đang xử lý.')
-					}
-					else {
-						console.log(data)
-						alert('Hệ thống đang có lỗi. Vui lòng thử lại sau.')
-					}
+					alert(data);
+					console.log(data)
 				}
 			});
 

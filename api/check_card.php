@@ -19,15 +19,6 @@ if(isset($_POST['type']) && isset($_POST['code']) && isset($_POST['serial']) && 
     $amount		= $_POST['amount']; // Mệnh giá
     $request_id = time(); //Mã tự sinh trong mỗi giao dịch và không giống nhau (Chúng tôi sẽ lưu lại mã này để đối chiếu khi có khiếu nại)
 
-    $res_status = $api->check_status($type, $code, $serial);
-
-    if ($res_status->status == '89') {
-        //echo '<pre>';
-        //print_r($res_status);
-		echo $res_status->status;
-        exit();
-    }
-
     $res = $api->check_card($type, $code, $serial, $amount, $request_id);
     //var_dump($res);
     
@@ -35,24 +26,14 @@ if(isset($_POST['type']) && isset($_POST['code']) && isset($_POST['serial']) && 
     //print_r($res);
 
 
-    //thành công
-    if(isset($res->status))
+    if(isset($res->status) && $res->status == '30')
     {
-//        $amount     = $res->amount; //mệnh giá thẻ mà bạn gưi sang
-//        //$type       = $res->type; //Loại thẻ mà bạn gưi sang
-//        $serial     = $res->serial; //serial mà bạn gưi sang
-//        $code       = $res->code; //mã thẻ mà bạn gưi sang
-//        $request_id = $res->request_id; //request_id ma đối tác gửi sang
-//        $transid    = $res->transid; //mã giao dịch bên key24h.com
-        
-        //echo 'Bạn đã gửi thành công thẻ '.$type .' mệnh giá '.number_format($amount).' đ';
-
-		echo $res->status;
-    }
-    //có lỗi
-    else
+        echo 'Thông tin thẻ không chính xác hoặc đã được sử dụng. Vui lòng kiểm tra lại.';
+    } else if (isset($res->status) && $res->status == '0') {
+        echo 'Nạp nổ thành công. Vui lòng chờ hệ thống xử lý.';
+    } else
     {
-        echo isset($res->message) ? $res->message : 'Loi khong xac dinh';
+        echo 'Hệ thống đang có lỗi. Vui lòng thử lại sau.';
     }
 }else{
     echo 'Kiem tra lai du lieu';
