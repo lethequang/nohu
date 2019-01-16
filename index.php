@@ -17,12 +17,10 @@
 <div class="top">
     <div class="container">
         <div class="row">
-            <div class="flex text-center"><a href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal">
-                <img src="img/face.png" class="face"> </a> <a href="javascript:void (0)" data-toggle="modal"
-                                                              data-target="#exampleModal"> <img src="img/dangnhap.png"
-                                                                                                class="dnhap"> </a> <a
-                    href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal"> <img
-                    src="img/dangky.png" class="dky"> </a></div>
+            <div class="flex text-center">
+                <a href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal"><img src="img/face.png" class="face"> </a>
+                <a href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal"> <img src="img/dangnhap.png" class="dnhap"> </a>
+                <a href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal"> <img src="img/dangky.png" class="dky"> </a></div>
             <div class="clearfix"></div>
             <div class="marquen">
                 <marquee>Chúc mừng người chơi <span>chipme</span> thắng <span>250.000</span> game <span>Siêu xe</span> ,
@@ -34,10 +32,9 @@
 </div>
 <div class="box">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 m20 pa_o text-center"><a href="javascript:void (0)" data-toggle="modal"
-                                                          data-target="#exampleModal"> <img src="img/iconhu.png"
-                                                                                            class="ihu"> </a>
+        <div class="row" id="row-content">
+            <div class="col-md-3 m20 pa_o text-center">
+                <a href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal"> <img src="img/iconhu.png" class="ihu"> </a>
                 <div class="sin">
                     <div class="item">
                         <div class="thum"><a href="javascript:void (0)" data-toggle="modal" data-target="#exampleModal">
@@ -121,7 +118,7 @@
                     <button type="button" id="btn-otp" class="otp"><img src="img/xacnhan.png"></button>
                     <button type="submit" id="btn-login"><img src="img/dnmodal.png"></button>
                     <br>
-                    <button type="button"><img src="img/fbmodal.png"></button>
+                    <button type="button" id="btn-fb"><img src="img/fbmodal.png"></button>
                     <div class="checkbox"><label> Quên mật khẩu? </label></div>
                 </form>
             </div>

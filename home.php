@@ -204,6 +204,21 @@ catch (Card_charging_Exception $e) {
 <script>
 
     $(document).ready(function() {
+    	// var selectMang = $('#select-mang').val();
+    	// $('#select-mang').change(function () {
+		// 	selectMang = this(value);
+		// })
+    	// switch (selectMang) {
+		// 	case '1':
+		// 		$("#img-chonthe").attr('src',"img/chonthe-viettel.PNG");
+		// 		break;
+		// 	case '2':
+		// 		$("#img-chonthe").attr('src',"img/chonthe-mobi.PNG");
+		// 		break;
+		// 	case '23':
+		// 		$("#img-chonthe").attr('src',"img/chonthe-vina.PNG");
+		// 		break;
+		// }
 
 		$('#submit').on('click', function () {
 			var serial = $('#serial').val(),

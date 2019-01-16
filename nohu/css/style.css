@@ -117,7 +117,7 @@ body{
     margin-top: -60px;
 }
 .chan{
-   margin-top: 20px;
+    margin-top: 20px;
 }
 .so p{
     font-size: 20px;
@@ -270,9 +270,645 @@ body{
 .mkOTP,.dangnhap  .otp{
     display: none;
 }
-@media (min-width: 1200px) {
+
+@media (max-width: 480px) { /* smartphones, iPhone, portrait 480x320 phones */
+    #chonthe{
+        display: none;
+    }
+
+    .napno{
+        width: 320px;
+        height: 550px;
+        background: url("../../img/popup.png") no-repeat top center;
+        background-size: 320px 550px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .napno .inz input{
+        width: 250px;
+        height: 60px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 250px 60px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    #captcha{
+        width: 130px;
+        height: 60px;
+        background: url("../../img/textbox-small.png") no-repeat top center;
+        background-size: 130px 60px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #captcha-img{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+
+    }
+    #refesh-img{
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .napno .inz select{
+        width: 250px;
+        height: 60px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 250px 60px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .text-select{
+        color:#737373;
+
+    }
+
+    .napno button{
+        background: none;
+        border: none;
+        display: inline-block;
+        width: 40%;
+
+    }
+
+    .modal-dialog{
+        background: transparent;
+    }
+    .modal-content{
+        width: 350px;
+        height: 350px;
+        background: transparent;
+    }
+    .dangnhap{
+        width: 350px;
+        height: 350px;
+        background: url("../../img/modal.png") no-repeat top center;
+        text-align: center;
+        padding-top: 80px;
+        background-size: 350px 350px;
+    }
+    .dangnhap .inz input{
+        width: 320px;
+        height: 50px;
+        background: url("../../img/input.png") no-repeat top center;
+        background-size: 320px 50px;
+        border: none;
+        font-size: 20px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .checkbox label{
+        font-size: 15px;
+        font-family: Avo;
+        color: white;
+    }
+    .checkbox label input{
+        width: 15px;
+        height: 15px;
+    }
+    .checkbox input[type=checkbox]{
+        margin-left: -40px;
+    }
+    .dangnhap button{
+        background: none;
+        border: none;
+        display: inline-block;
+    }
+    #btn-login img{
+        width: 60%;
+    }
+    #btn-fb img{
+        width: 60%;
+    }
+    .close{
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
     .container{
-        width: 1200px;
+        width: 400px;
+    }
+
+    #testimonial-slider{
+        width: 400px;
+    }
+    .item{
+        display: flex;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        padding: 0px 2px;
+        margin-bottom: 3px;
+    }
+    .item h2{
+        margin: 0 auto;
+        font-family: gua;
+        font-size: 10px;
+        color: white;
+    }
+    .item p{
+        font-size: 10px;
+        font-family: isa;
+        color: #ffff00;
+    }
+    .m20{
+        display: none;
+    }
+    .m80{
+        width: 80%;
+        margin-top: 100px;
+    }
+
+    img.face {
+        width: 80px;
+    }
+    img.dnhap {
+        width: 110px;
+    }
+    img.dky {
+        width: 110px;
+    }
+
+}
+@media (min-width:481px) and (max-width: 768px){ /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    #chonthe{
+        display: none;
+    }
+
+    .napno{
+        width: 450px;
+        height: 550px;
+        background: url("../../img/popup.png") no-repeat top center;
+        background-size: 450px 550px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .napno .inz input{
+        width: 350px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 350px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    #captcha{
+        width: 150px;
+        height: 70px;
+        background: url("../../img/textbox-small.png") no-repeat top center;
+        background-size: 150px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #captcha-img{
+        width: 90px;
+        height: 66px;
+        margin-bottom: 10px;
+
+    }
+    #refesh-img{
+        width: 90px;
+        margin-bottom: 10px;
+    }
+
+    .napno .inz select{
+        width: 350px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 350px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .text-select{
+        color:#737373;
+
+    }
+
+    .napno button{
+        background: none;
+        border: none;
+        display: inline-block;
+        width: 40%;
+
+    }
+
+    .modal-dialog{
+        background: transparent;
+    }
+    .modal-content{
+        /*width: 500px;*/
+        /*height: 400px;*/
+        background: transparent;
+    }
+    .dangnhap{
+        width: 500px;
+        height: 400px;
+        background: url("../../img/modal.png") no-repeat top center;
+        text-align: center;
+        padding-top: 80px;
+        background-size: 500px 400px;
+    }
+    .dangnhap .inz input{
+        width: 420px;
+        height: 50px;
+        background: url("../../img/input.png") no-repeat top center;
+        background-size: 420px 50px;
+        border: none;
+        font-size: 25px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .checkbox label{
+        font-size: 25px;
+        font-family: Avo;
+        color: white;
+    }
+    .checkbox label input{
+        width: 25px;
+        height: 25px;
+    }
+    .checkbox input[type=checkbox]{
+        margin-left: -40px;
+    }
+    .dangnhap button{
+        background: none;
+        border: none;
+        display: inline-block;
+    }
+    #btn-login img{
+        width: 60%;
+    }
+    #btn-fb img{
+        width: 60%;
+    }
+    .close{
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+
+    .container{
+        width: 800px;
+    }
+    .box{
+        width: 800px;
+    }
+    #row-content{
+        width: 800px;
+    }
+    #testimonial-slider{
+        width: 800px;
+    }
+    .item{
+        display: flex;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        padding: 0px 3px;
+        margin-bottom: 10px;
+    }
+    .item h2{
+        margin: 0 auto;
+        font-family: gua;
+        font-size: 15px;
+        color: white;
+    }
+    .item p{
+        font-size: 20px;
+        font-family: isa;
+        color: #ffff00;
+    }
+    .m20{
+        display: none;
+    }
+    .m80{
+        width: 80%;
+        margin-top: 100px;
+    }
+}
+@media (min-width:769px) and (max-width: 960px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    #img-chonthe{
+        width: 90% !important;
+    }
+
+    .napno{
+        width: 700px;
+        height: 550px;
+        background: url("../../img/popup.png") no-repeat top center;
+        background-size: 700px 550px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .napno .inz input{
+        width: 350px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 350px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    #captcha{
+        width: 130px;
+        height: 70px;
+        background: url("../../img/textbox-small.png") no-repeat top center;
+        background-size: 130px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #captcha-img{
+        width: 90px;
+        height: 66px;
+        margin-bottom: 10px;
+
+    }
+    #refesh-img{
+        width: 90px;
+        margin-bottom: 10px;
+    }
+
+    .napno .inz select{
+        width: 350px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 350px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .text-select{
+        color:#737373;
+
+    }
+
+    .napno button{
+        background: none;
+        border: none;
+        display: inline-block;
+        width: 60%;
+
+    }
+
+    .container{
+        width: 600px;
+    }
+    .m20{
+        display: none;
+    }
+    .m80{
+        width: 100%;
+        margin-top: 100px;
+    }
+
+}
+@media (min-width:961px) and (max-width: 1024px){ /* tablet, landscape iPad, lo-res laptops ands desktops */
+    #img-chonthe{
+        width: 90% !important;
+    }
+
+    .napno{
+        width: 850px;
+        height: 550px;
+        background: url("../../img/popup.png") no-repeat top center;
+        background-size: 850px 550px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .napno .inz input{
+        width: 400px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 400px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    #captcha{
+        width: 180px;
+        height: 70px;
+        background: url("../../img/textbox-small.png") no-repeat top center;
+        background-size: 180px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #captcha-img{
+        width: 110px;
+        height: 66px;
+        margin-bottom: 10px;
+
+    }
+    #refesh-img{
+        width: 90px;
+        margin-bottom: 10px;
+    }
+
+    .napno .inz select{
+        width: 400px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 400px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .text-select{
+        color:#737373;
+
+    }
+
+    .napno button{
+        background: none;
+        border: none;
+        display: inline-block;
+        width: 70%;
+
+    }
+
+    .container{
+        width: 900px;
+    }
+    .m20{
+        display: none;
+    }
+    .m80{
+        width: 100%;
+        margin-top: 100px;
+    }
+}
+@media (min-width:1025px) and (max-width: 1280px){ /* big landscape tablets, laptops, and desktops */
+
+    .modal-dialog{
+        /*width: 728px;*/
+        background: transparent;
+    }
+    .modal-content{
+        background: transparent;
+    }
+    #menhgia{
+        background: url("../../img/menhgia-help.png") no-repeat top center;
+        width: 100%;
+        height: 650px;
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    #img-chonthe{
+        width: 90% !important;
+    }
+
+    .napno{
+        width: 850px;
+        height: 550px;
+        background: url("../../img/popup.png") no-repeat top center;
+        background-size: 850px 550px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .napno .inz input{
+        width: 400px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 400px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    #captcha{
+        width: 180px;
+        height: 70px;
+        background: url("../../img/textbox-small.png") no-repeat top center;
+        background-size: 180px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #captcha-img{
+        width: 110px;
+        height: 66px;
+        margin-bottom: 10px;
+
+    }
+    #refesh-img{
+        width: 90px;
+        margin-bottom: 10px;
+    }
+
+    .napno .inz select{
+        width: 400px;
+        height: 70px;
+        background: url("../../img/textbox.png") no-repeat top center;
+        background-size: 400px 70px;
+        border: none;
+        font-size: 23px;
+        font-family: Avo;
+        color: white;
+        padding: 0px 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .text-select{
+        color:#737373;
+
+    }
+
+    .napno button{
+        background: none;
+        border: none;
+        display: inline-block;
+        width: 50%;
+
+    }
+
+
+    .container{
+        width: 960px;
     }
     .m20{
         width: 20%;
@@ -282,7 +918,7 @@ body{
         margin-top: 80px;
     }
 }
-@media (min-width: 1800px) {
+@media (min-width:1281px) { /* hi-res laptops and desktops */
     .container{
         width: 1740px;
     }
@@ -290,7 +926,7 @@ body{
         width: 20%;
     }
     .m80{
-        width: 80%;
+        width: 70%;
         margin-top: 107px;
     }
     .box {
@@ -382,3 +1018,4 @@ body{
         margin-top: 10px;
     }
 }
+
